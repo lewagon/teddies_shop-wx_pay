@@ -20,6 +20,9 @@ gem 'autoprefixer-rails'
 
 gem 'money-rails'
 
+# $ bundle config --local local.wx_pay /Users/guochunzhong/git/oss/wx_pay
+gem 'wx_pay', git: 'git@github.com:Eric-Guo/wx_pay.git', branch: :master
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
