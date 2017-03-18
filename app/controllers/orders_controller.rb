@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
     @teddy = Teddy.find(params[:teddy_id])
     order  = Order.create!(teddy_sku: @teddy.sku, amount: @teddy.price, state: 'pending')
 
-    redirect_to order_payments_path(order)
+    redirect_to order_payment_path(order)
   end
 
   def show

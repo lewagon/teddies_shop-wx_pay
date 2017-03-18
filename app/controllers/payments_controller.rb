@@ -1,4 +1,7 @@
 class PaymentsController < ApplicationController
+  before_action :authenticate_user!, except: [:create]
+  skip_before_action :verify_authenticity_token, only: [:create]
+
   def show
     @order = Order.where(state: 'pending').find(params[:order_id])
 
@@ -14,6 +17,16 @@ class PaymentsController < ApplicationController
 
     if r.success?
       @qr = RQRCode::QRCode.new(r['code_url'])
+    end
+  end
+
+  def create
+    result = Hash.from_xml(request.body.read)['xml']
+    logger.info result.inspect
+    if WxPay::Sign.verify?(result)
+      render xml: { return_code: 'SUCCESS', return_msg: 'OK' }.to_xml(root: 'xml', dasherize: false)
+    else
+      render xml: { return_code: 'FAIL', return_msg: 'Signature Error' }.to_xml(root: 'xml', dasherize: false)
     end
   end
 end
