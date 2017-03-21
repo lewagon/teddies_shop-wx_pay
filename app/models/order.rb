@@ -6,7 +6,7 @@ class Order < ApplicationRecord
 
   def run_notification
     if state == 'paid' && payment.present? # state_was == 'paid' also
-      NotificationChannel.broadcast_to 'web_notifications', shop_event: 'order_paid', order_id: id
+      NotificationChannel.broadcast_to user, shop_event: 'order_paid', order_id: id
     end
   end
 end
