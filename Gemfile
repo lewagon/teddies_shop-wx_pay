@@ -1,7 +1,6 @@
 source 'https://gems.ruby-china.org'
-ruby '~> 2.4.0'
 
-gem 'rails', '~> 5.1.0.beta1'
+gem 'rails'
 
 gem 'puma'
 gem 'pg'
@@ -20,8 +19,7 @@ gem 'autoprefixer-rails'
 
 gem 'money-rails'
 
-# $ bundle config --local local.wx_pay /Users/guochunzhong/git/oss/wx_pay
-gem 'wx_pay', git: 'git@github.com:Eric-Guo/wx_pay.git', branch: :master
+gem 'wx_pay'
 gem 'rqrcode'
 
 group :development, :test do
@@ -34,5 +32,3 @@ group :development, :test do
   gem 'listen'
   gem 'spring-watcher-listen'
 end
-
-
