@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  url: postgres://localhost/teddies_shop_development
+
+test:
+  adapter: postgresql
+  url: postgres://localhost/teddies_shop_test
+
+production:
+  adapter: redis
+  url: postgres://localhost/teddies_shop_production
+  channel_prefix: teddies_shop_production
