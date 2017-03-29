@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resource :payment, only: [:show]
   end
   post 'wx_notify', to: 'payments#create'
+  resource :wechat, only: [:show, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
