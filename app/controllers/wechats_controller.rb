@@ -6,8 +6,11 @@ class WechatsController < ActionController::Base
     request.reply.text "User #{request[:FromUserName]} EventKey #{key} happen"
   end
 
-  on :click, with: 'BTN_PROMOTION' do |request, key|
-    request.reply.text "User #{request[:FromUserName]} EventKey #{key} happen"
+  on :click, with: 'BTN_PROMOTION' do |request|
+    news = [{ title: 'Time limit promotion', description: 'Next batch early bird access',
+              pic_url: 'http://mmbiz.qpic.cn/mmbiz_jpg/kDhl1Ny7yoR1OvNKibKNW7INHiaohlmlRibicF3o0W6Q74hucE3U0FMdLzJHbjhuvgWvOYDibZAYzVKK0RXyPnk0nHQ/0',
+              url: 'http://teddies-shop.shanghaiwogeng.com/' }]
+    request.reply.news(news)
   end
 
   on :text do |request, content|
