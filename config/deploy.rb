@@ -2,6 +2,7 @@
 lock '~> 3.8.0'
 
 set :application, 'teddies_shop'
+# replace your repo_url and do not forget add machine id_rsa.pub to Settings->Deploy keys
 set :repo_url, 'git@github.com:Eric-Guo/teddies_shop-wx_pay.git'
 
 # Default branch is :master
