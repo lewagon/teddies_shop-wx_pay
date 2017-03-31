@@ -5,6 +5,7 @@ tmp/*
 *.swp
 .DS_Store
 public/assets
+public/MP_*.txt
 *.sublime-workspace
 # Ignore application configuration
 /config/application.yml
