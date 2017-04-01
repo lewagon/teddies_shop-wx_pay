@@ -23,7 +23,7 @@
         </div>
         <div class="weui-form-preview__ft">
             <%= link_to 'Return', wewebs_path, class: 'weui-form-preview__btn weui-form-preview__btn_default' -%>
-            <button type="submit" class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">Pay</button>
+            <%= link_to 'Pay', direct_pay_path(teddy_id: @teddy), class: 'weui-form-preview__btn weui-form-preview__btn_primary' -%>
         </div>
     </div>
 </div>

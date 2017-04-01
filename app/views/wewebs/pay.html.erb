@@ -1,0 +1,17 @@
+<script type="application/javascript">
+  wx.ready(function() {
+    wx.chooseWXPay({
+      timestamp: "<%= @pay_params[:timeStamp] -%>",
+      nonceStr: "<%= @pay_params[:nonceStr] -%>",
+      package: "<%= @pay_params[:package] -%>",
+      signType: "<%= @pay_params[:signType] -%>",
+      paySign: "<%= @pay_params[:paySign] -%>",
+      success: function (res) {
+        alert(JSON.stringify(res));
+      },
+      error: function(e) {
+        alert(JSON.stringify(e));
+      }
+    });
+  });
+</script>
