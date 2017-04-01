@@ -3,5 +3,6 @@ class WewebsController < ApplicationController
   layout 'wechat'
 
   def index
+    @teddies = Teddy.all
   end
 end
