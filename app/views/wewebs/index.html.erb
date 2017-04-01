@@ -5,7 +5,7 @@
     </div>
     <div class="weui-grids">
     <% @teddies.each do |teddy| %>
-        <%= link_to teddy_path(teddy), class: 'weui-grid' do %>
+        <%= link_to weweb_path(teddy), class: 'weui-grid' do %>
             <div class="weui-grid__icon">
                 <%= image_tag(teddy.photo_url) %>
             </div>
