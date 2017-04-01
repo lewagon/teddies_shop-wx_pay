@@ -7,7 +7,7 @@
       signType: "<%= @pay_params[:signType] -%>",
       paySign: "<%= @pay_params[:paySign] -%>",
       success: function (res) {
-        alert(JSON.stringify(res));
+        wx.closeWindow();
       },
       error: function(e) {
         alert(JSON.stringify(e));
