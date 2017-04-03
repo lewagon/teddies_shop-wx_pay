@@ -15,9 +15,22 @@
     </div>
 </div>
 
-
-<script type="application/javascript">
+<%= javascript_tag type: 'application/javascript' do %>
   wx.ready(function() {
-      wx.hideOptionMenu();
+    wx.onMenuShareTimeline({
+      title: "<%= @title -%>",
+      link: "<%= wewebs_url -%>",
+      imgUrl: "<%= image_url 'logo.jpg' -%>"
+    });
+
+    wx.onMenuShareAppMessage({
+      title: "<%= @title -%>",
+      desc: "<%= @message_desc -%>",
+      link: "<%= wewebs_url -%>",
+      imgUrl: "<%= image_url 'logo.jpg' -%>",
+      success: function() {
+        alert('Shared successed');
+      }
+    });
   });
-</script>
+<% end  %>

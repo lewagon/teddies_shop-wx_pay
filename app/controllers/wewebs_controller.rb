@@ -1,10 +1,12 @@
 class WewebsController < ApplicationController
   wechat_api
   layout 'wechat'
-  skip_before_action :authenticate_user!, only: [:pay]
+  skip_before_action :authenticate_user!, only: %i[pay index]
 
   def index
     @teddies = Teddy.all
+    @title = 'New teddies shop on Wechat'
+    @message_desc = 'Build for Le Wagon Shanghai in Wechat'
   end
 
   def show
