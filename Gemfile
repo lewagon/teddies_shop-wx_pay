@@ -22,6 +22,9 @@ gem 'money-rails'
 gem 'wx_pay'
 gem 'rqrcode'
 
+gem 'wechat'
+gem 'weui-rails'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'

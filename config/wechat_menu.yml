@@ -1,0 +1,21 @@
+# More option see https://github.com/Eric-Guo/wechat#menu-create
+button:
+ -
+  type: "view"
+  name: "💝Web"
+  url:  "http://teddies-shop.shanghaiwogeng.com"
+ -
+  name: "Ad."
+  sub_button:
+   -
+    type: "click"
+    name: "Coupon"
+    key:  "BTN_COUPON"
+   -
+    type: "click"
+    name: "Promotion"
+    key:  "BTN_PROMOTION"
+ -
+  type: "view"
+  name: "📱Wechat"
+  url:  "http://teddies-shop.shanghaiwogeng.com/wewebs"

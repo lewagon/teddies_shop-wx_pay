@@ -1,0 +1,11 @@
+wechat_app_id: "wx12345678901cb000"
+wechat_secret: "32 chat long key"
+wechat_token:  "decide by you"
+wechat_encrypt_mode: "true"
+wechat_encoding_aes_key: "43 char long key"
+wechat_trusted_domain_fullname: "http://teddies-shop.shanghaiwogeng.com"
+
+# following can omit if you don't need wechat pay
+wechat_pay_api_key: "32 chat long key"
+wechat_pay_mch_id: "1234567890"
+wechat_pay_notify_url: "http://teddies-shop.shanghaiwogeng.com/wx_notify"

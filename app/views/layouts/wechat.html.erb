@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title><%= @title.presence || "Teddies Shop" %></title>
+    <%= stylesheet_link_tag 'weui-rails', media: 'all' %>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+</head>
+<body>
+<%= wechat_config_js debug: false, api: %w(hideMenuItems closeWindow chooseWXPay onMenuShareTimeline onMenuShareAppMessage) -%>
+<%= yield %>
+</body>
+</html>

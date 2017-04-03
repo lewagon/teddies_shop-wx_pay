@@ -1,0 +1,29 @@
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">Teddies Shop</h1>
+        <p class="page__desc">present by weui for mobile</p>
+    </div>
+    <div class="weui-form-preview">
+        <div class="weweb-photo__bd">
+            <%= image_tag @teddy.photo_url, class: 'weweb-photo' %>
+        </div>
+        <div class="weui-form-preview__hd">
+            <label class="weui-form-preview__label">Price</label>
+            <em class="weui-form-preview__value"><%= humanized_money_with_symbol(@teddy.price) %></em>
+        </div>
+        <div class="weui-form-preview__bd">
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">Name</label>
+                <span class="weui-form-preview__value"><%= @teddy.name %></span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">Description</label>
+                <span class="weui-form-preview__value">Some awesome description of our amazing teddy.</span>
+            </div>
+        </div>
+        <div class="weui-form-preview__ft">
+            <%= link_to 'Return', wewebs_path, class: 'weui-form-preview__btn weui-form-preview__btn_default' -%>
+            <%= link_to 'Pay', direct_pay_path(teddy_id: @teddy), class: 'weui-form-preview__btn weui-form-preview__btn_primary' -%>
+        </div>
+    </div>
+</div>
