@@ -22,7 +22,7 @@ class WewebsController < ApplicationController
         body: order.teddy_sku,
         out_trade_no: "teddies_shop_order_id_#{order.id}",
         total_fee: order.amount_fens,
-        spbill_create_ip: Socket.ip_address_list.detect(&:ipv4_private?).ip_address,
+        spbill_create_ip: request.ip,
         notify_url: Figaro.env.wechat_pay_notify_url,
         trade_type: 'JSAPI',
         openid: openid
