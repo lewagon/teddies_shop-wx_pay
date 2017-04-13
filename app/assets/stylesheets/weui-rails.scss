@@ -1,7 +1,14 @@
 $weuiGridIconSize: 128px;
 $weuiGridColumnCount: 2;
 
-@import "weui";
+@import "base/reset";
+
+// cell
+@import "widget/weui-cell/weui-cell_global";
+@import "widget/weui-cell/weui-form";
+
+// grid
+@import "widget/weui-grid/weui-grid";
 
 .page {
     position: absolute;
