@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <%= csrf_meta_tags %>
     <title><%= @title.presence || "Teddies Shop" %></title>
     <%= stylesheet_link_tag 'weui-rails', media: 'all' %>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
