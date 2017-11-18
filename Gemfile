@@ -17,7 +17,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
-gem 'money-rails'
+gem 'money-rails', '~>1'
 
 gem 'wx_pay'
 gem 'rqrcode'
